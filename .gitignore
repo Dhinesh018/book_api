@@ -1,0 +1,29 @@
+# Virtual env
+myenv/
+env/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE/editor stuff
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Local DB files
+*.db
+*.sqlite3
+
+# Environment / secrets
+.env
+.env.*
+
+# Uvicorn / logs
+*.log
