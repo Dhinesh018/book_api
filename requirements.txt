@@ -1,8 +1,21 @@
-fastapi
-uvicorn
-sqlalchemy
-pydantic
-email-validator
-passlib[bcrypt]
-python-jose
-python-multipart
+# Web framework
+fastapi==0.111.0
+uvicorn[standard]==0.30.0
+
+# ORM (if using databases)
+sqlalchemy==2.0.30
+
+# Data validation
+pydantic==2.7.1
+email-validator==2.1.1
+
+# Database driver (if using SQLite, keep this)
+aiosqlite==0.20.0
+
+# For environment variables
+python-dotenv==1.0.1
+
+# ML / Data Science (optional, if needed later)
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.0
