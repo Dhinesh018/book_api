@@ -6,11 +6,16 @@ from auth import hash_password
 from fastapi.security import OAuth2PasswordBearer,OAuth2PasswordRequestForm
 from auth import create_access_token,ACCESS_TOKEN_EXPIRE_MINUTES,authenticate_user
 from datetime import timedelta
+import os,uvicorn
 
 
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))  # fallback to 8000 for local dev
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
 
 #dependency
 def get_db():
