@@ -1,7 +1,7 @@
 pip>=25.1.1
 setuptools>=65.5.0
 wheel
-jose
+python-jose[cryptography]
 # Web framework
 fastapi==0.111.0
 uvicorn[standard]==0.30.0
