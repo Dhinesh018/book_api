@@ -1,26 +1,30 @@
-pip>=25.1.1
+# Core tools
 setuptools>=65.5.0
 wheel
+
+# Security
 python-jose[cryptography]
+passlib[bcrypt]
+
 # Web framework
 fastapi==0.111.0
 uvicorn[standard]==0.30.0
-passlib[bcrypt]
-# ORM (if using databases)
+
+# ORM & DB
 sqlalchemy==2.0.30
+psycopg2-binary==2.9.9   # PostgreSQL
+aiosqlite==0.20.0        # Only if you still want SQLite support
 
 # Data validation
 pydantic==2.7.1
 email-validator==2.1.1
 
-# Database driver (if using SQLite, keep this)
-aiosqlite==0.20.0
-
-# For environment variables
+# Env vars
 python-dotenv==1.0.1
 
-# ML / Data Science (optional, if needed later)
+# ML / Data Science
 numpy==1.26.4
 pandas==2.2.2
 scikit-learn==1.5.0
+
 
