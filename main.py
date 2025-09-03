@@ -25,6 +25,10 @@ def get_db():
     finally:
         db.close()
 
+@app.get("/")
+def welcome():
+    return {"message":"welcome"}
+
 # Login endpoint
 @app.post("/token")
 def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
