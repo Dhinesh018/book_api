@@ -14,7 +14,7 @@ passlib[bcrypt]
 sqlalchemy==2.0.30
 
 # PostgreSQL driver (use binary to avoid compilation issues)
-psycopg2-binary==2.9.9
+psycopg2-binary
 
 # SQLite (optional fallback)
 aiosqlite==0.20.0
