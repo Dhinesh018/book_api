@@ -101,9 +101,8 @@ def delete_book(book_id: int, db: Session = Depends(get_db)):
     db.commit()
     return {"message": "Book deleted"}
 
-
-@app.patch("/books/{book_id}",response_model= schemas.BookOut)
-def book_patch_update(book_id : int ,book: schemas.BookUpdate, db : Session = Depends(get_db)):
+@app.patch("/books/{book_id}", response_model=schemas.BookOut)
+def book_patch_update(book_id: int, book: schemas.BookUpdate, db: Session = Depends(get_db)):
     db_book = db.query(models.Book).filter(models.Book.id == book_id).first()
     if not db_book:
         raise HTTPException(status_code=404, detail="Book not found")
@@ -112,3 +111,4 @@ def book_patch_update(book_id : int ,book: schemas.BookUpdate, db : Session = De
     db.commit()
     db.refresh(db_book)
     return db_book
+
