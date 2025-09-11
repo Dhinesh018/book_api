@@ -1,5 +1,7 @@
-# Security / JWT
-python-jose[cryptography]
+# Core tools
+pip>=25.2
+setuptools>=70.0
+wheel
 
 # Web framework
 fastapi==0.111.0
@@ -10,7 +12,7 @@ passlib[bcrypt]
 sqlalchemy==2.0.30
 
 # PostgreSQL driver (use binary to avoid compilation issues)
-psycopg2-binary
+psycopg2-binary==2.9.9
 
 # SQLite (optional fallback)
 aiosqlite==0.20.0
@@ -18,6 +20,9 @@ aiosqlite==0.20.0
 # Data validation
 pydantic==2.7.1
 email-validator==2.1.1
+
+# Security / JWT
+python-jose[cryptography]
 
 # Environment variables
 python-dotenv==1.0.1
